@@ -1,0 +1,125 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  .baner_area {
+    height: 45rem;
+    width: 40rem;
+    position:relative;
+
+    img {
+      width: 31.25rem;
+      margin-top: 6.875rem;
+      margin-left: 8.75rem;
+    }
+
+    .title {
+      position: absolute;
+      top:33.75rem;
+      left:10.5rem;
+      z-index: 1000;
+
+      h1 {
+        font-size: 2rem;
+        color: #fcf7ff;
+      }
+
+      p {
+        font-size: 1.25rem;
+        text-align: center;
+        color: #fcf7ff;
+      }
+    }
+  }
+
+  .login_area {
+    height: 45rem;
+    width: 40rem;
+
+    .logo {
+      width: 14.75rem;
+      margin-top: 2rem;
+      margin-left: 2rem;
+    }
+
+    .login_form {
+      margin-left: 10.5625rem;
+      margin-top: 4rem;
+
+      h1 {
+        font-size: 2.25rem;
+      }
+
+      p {
+        font-size: 1.125rem;
+      }
+
+      input,
+      button {
+        width: 18.8125rem;
+        height: 2.6875rem;
+        border-radius: 19px;
+        padding: 0 1rem;
+        margin-top: 1.5rem;
+        position: relative;
+        z-index: 1000;
+      }
+
+      input {
+        background-color: #ffffff;
+        position: relative;
+        border: 2px;
+
+      }
+
+      a {
+
+        text-decoration: underline;
+        color: #58018a
+      }
+
+      .forgot {
+        text-align: end;
+        margin-right: 10.5625rem;
+        margin-top: 1rem;
+      }
+
+      button {
+        background-color: #01277e;
+        border: none;
+        font-weight: bold;
+        color: #CCCCCC;
+        font-size: 1.1rem;
+      }
+
+      button:hover {
+        cursor: pointer;
+        box-shadow: 2px 2px 0 1px rgb(6, 0, 83);
+      }
+
+      button:active {
+        box-shadow: 0 0 0 0 rgb(6, 0, 83), inset 3px 3px 3px rgb(6, 0, 83);
+        transform: translate(2);
+      }
+
+      .signup {
+        margin-top: 1.8125rem;
+      }
+    }
+  }
+}
+
+.container::after {
+  background: linear-gradient(180.71deg, rgba(196, 196, 196, 0) 0.86%, rgba(0, 41, 102, 0.8) 99.65%);
+  bottom: 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  pointer-events: none;
+}
