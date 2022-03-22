@@ -1,33 +1,35 @@
+main {
+  height: 100vh;
+}
+
 .container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
   .baner_area {
-    height: 45rem;
-    width: 40rem;
+    width: 100vh;
     position:relative;
+    padding: 1rem;
 
     img {
-      width: 31.25rem;
-      margin-top: 6.875rem;
-      margin-left: 8.75rem;
+      width: 50rem;
     }
 
     .title {
       position: absolute;
-      top:33.75rem;
-      left:10.5rem;
+      top:43rem;
+      justify-self: center;
       z-index: 1000;
 
       h1 {
-        font-size: 2rem;
+        font-size: 3.2rem;
         color: #fcf7ff;
       }
 
       p {
-        font-size: 1.25rem;
+        font-size: 2rem;
         text-align: center;
         color: #fcf7ff;
       }
@@ -35,34 +37,36 @@
   }
 
   .login_area {
-    height: 45rem;
-    width: 40rem;
+    width: 100vh;
 
     .logo {
-      width: 14.75rem;
-      margin-top: 2rem;
-      margin-left: 2rem;
+      width: 23.6rem;
+      margin-top: 3.2rem;
+      margin-left: 3.2rem;
     }
 
     .login_form {
-      margin-left: 10.5625rem;
-      margin-top: 4rem;
+      width: 100%;
+      margin-left: 5rem;
+      margin-top: 6.4rem;
 
       h1 {
-        font-size: 2.25rem;
+        font-size: 3.6rem;
+        width: max-content;
       }
 
       p {
-        font-size: 1.125rem;
+        font-size: 1.8rem;
+        width: max-content;
       }
 
       input,
       button {
-        width: 18.8125rem;
-        height: 2.6875rem;
+        width: 30.1rem;
+        height: 4.3rem;
         border-radius: 19px;
-        padding: 0 1rem;
-        margin-top: 1.5rem;
+        padding: 0 1.6rem;
+        margin-top: 2.4rem;
         position: relative;
         z-index: 1000;
       }
@@ -77,13 +81,13 @@
       a {
 
         text-decoration: underline;
-        color: #58018a
+        color: #58018a;
+        width: max-content;
       }
 
       .forgot {
-        text-align: end;
-        margin-right: 10.5625rem;
-        margin-top: 1rem;
+        margin-top: 1.6rem;
+        width: max-content;
       }
 
       button {
@@ -91,7 +95,7 @@
         border: none;
         font-weight: bold;
         color: #CCCCCC;
-        font-size: 1.1rem;
+        font-size: 1.76rem;
       }
 
       button:hover {
@@ -105,7 +109,8 @@
       }
 
       .signup {
-        margin-top: 1.8125rem;
+        margin-top: 2.9rem;
+        width: max-content;
       }
     }
   }
@@ -122,4 +127,53 @@
   top: 0;
   width: 100%;
   pointer-events: none;
+}
+
+@media (max-width: 894px){
+
+  .container
+  .login_area
+  .login_form {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 762px){
+
+  .container
+  .baner_area
+  img {
+    margin-left: 0.5rem;
+  }
+
+  .container
+  .baner_area
+  .title {
+    left:0.3rem;
+  }
+}
+
+@media (max-width: 646px){
+  .container
+  .baner_area {
+    visibility: hidden;
+    width: 0;
+  }
+
+  .container
+  .login_area {
+    justify-items: center;
+    width: 100%;
+    max-width: 63rem;
+  }
+
+  .container
+  .login_area
+  .login_form {
+    margin: 3rem 0;
+    input,
+    button {
+      width: 40rem;
+    }
+  }
 }
