@@ -1,20 +1,25 @@
 main {
   height: 100vh;
+  width: 100vw;
 }
 
 .container {
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
   .baner_area {
-    width: 100vh;
+    display: flex;
+    width: 50vw;
     position:relative;
-    padding: 1rem;
+    justify-content: center;
 
     img {
       width: 50rem;
+      justify-self: center;
     }
 
     .title {
@@ -37,17 +42,16 @@ main {
   }
 
   .login_area {
-    width: 100vh;
+    width: 50vw;
 
     .logo {
       width: 23.6rem;
       margin-top: 3.2rem;
-      margin-left: 3.2rem;
     }
 
     .login_form {
-      width: 100%;
-      margin-left: 5rem;
+      width: 90%;
+      max-width: 52rem;
       margin-top: 6.4rem;
 
       h1 {
@@ -62,7 +66,7 @@ main {
 
       input,
       button {
-        width: 30.1rem;
+        width: 100%;
         height: 4.3rem;
         border-radius: 19px;
         padding: 0 1.6rem;
@@ -134,7 +138,7 @@ main {
   .container
   .login_area
   .login_form {
-    margin-left: 1rem;
+    width: 90%;
   }
 }
 
@@ -143,37 +147,36 @@ main {
   .container
   .baner_area
   img {
-    margin-left: 0.5rem;
   }
 
   .container
   .baner_area
   .title {
-    left:0.3rem;
   }
 }
 
 @media (max-width: 646px){
   .container
   .baner_area {
-    visibility: hidden;
-    width: 0;
+    display: none;
   }
 
   .container
   .login_area {
-    justify-items: center;
-    width: 100%;
-    max-width: 63rem;
+    width: 90vw;
+    height: 100vh;
+
+    .logo {
+      margin-left: 20%;
+    }
   }
 
   .container
   .login_area
   .login_form {
-    margin: 3rem 0;
     input,
     button {
-      width: 40rem;
+      width: 100%;
     }
   }
 }
